@@ -1,7 +1,7 @@
 # ESP8266 - WS2812/NeoPixel NeoMatrix - Text Scroller
-This has been tested and works with the Arduino IDE v1.6.7 & v1.6.8  
+Presents a small web ui where you can type a message, choose a color and display the message on your ws2812 NeoPixel NeoMatrix.
 
-## Project Software / Arduino Libraries Used
+## Arduino Libraries Used
 ### JavaScript Libraries  
 - [Spectrum Colorpicker](https://github.com/bgrins/spectrum)  
 - [Twitter Bootstrap](http://getbootstrap.com/)  
