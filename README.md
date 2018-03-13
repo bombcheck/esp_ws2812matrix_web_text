@@ -17,6 +17,17 @@ Presents a small web ui where you can type a message, choose a color and display
 - Download the [Spectrum Colorpicker](https://github.com/bgrins/spectrum) from GitHub and place on your server so that you can access the files from the sketch. Alternatively you can try to link directly to GitHub which the files are currently setup for but not recommended.  
 - Download this repo & open in the Arduino IDE  
 - Download the required Adafruit libraries from inside the Arduino IDE (You may need to visit Adafruit.com for a [how-to guide](https://learn.adafruit.com/adafruit-arduino-ide-setup/arduino-1-dot-6-x-ide). [Full 3rd party list](https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls#list-of-3rd-party-boards-support-urls))  
+- Define the pin where your matrix is connected to:
+`#define PIN 1`
+- Define your pixel matrix (for example a 8x8 matrix with first pixel at bottom-right, wired in zigzag columns with GRB-order and 800 kHz):
+
+```
+Adafruit_NeoMatrix matrix = Adafruit_NeoMatrix(8, 8, PIN,
+  NEO_MATRIX_BOTTOM     + NEO_MATRIX_RIGHT +
+  NEO_MATRIX_COLUMNS + NEO_MATRIX_ZIGZAG,
+  NEO_GRB            + NEO_KHZ800
+);
+```
 - Define Your WiFi Connection Information:  
 
 ```c++
